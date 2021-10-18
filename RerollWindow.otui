@@ -1,0 +1,86 @@
+RerollWindow < MainWindow
+  !text: tr('Reroll System')
+  size: 270 150
+  @onEscape: self:hide()
+
+  TextEdit
+    id: dmgReroll
+    anchors.left: parent.left
+    anchors.top: parent.top
+    anchors.right: parent.horizontalCenter
+    margin-top: 4
+    text-align: center
+    text: 0
+    color: #f5bc59
+
+
+  TextEdit
+    id: speedReroll
+    anchors.left: parent.horizontalCenter
+    anchors.right: parent.right
+    anchors.top: dmgReroll.top
+    margin-left: 3
+    text-align: center
+    text: 0
+    color: white
+
+
+  TextEdit
+    id: regenReroll
+    anchors.left: parent.left
+    anchors.top: dmgReroll.bottom
+    anchors.right: parent.horizontalCenter
+    margin-top: 4
+    text-align: center
+    text: 0
+    color: #bbc6ca
+
+
+  TextEdit
+    id: hpmpReroll
+    anchors.left: parent.horizontalCenter
+    anchors.right: parent.right
+    anchors.top: regenReroll.top
+    margin-left: 3
+    text-align: center
+    text: 0
+    color: #a16b54
+
+  Label
+    id: label    
+    anchors.top: regenReroll.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 10
+    text-align: center
+    text: Script made by Hawkeye
+    font: cipsoftFont
+    image-source: /images/ui/window
+    image-border: 1    
+    width: 130
+
+
+  HorizontalSeparator
+    id: separator
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: closeButton.top
+    margin-bottom: 8  
+
+  Label
+    id: quantity
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    text: Missing: 0 attribute.
+    margin-bottom: 5
+    margin-left: 5
+    width: 130
+
+  Button
+    id: closeButton
+    !text: tr('Close')
+    font: cipsoftFont
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 45 21
+    margin-top: 15
+    margin-right: 5
