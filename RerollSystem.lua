@@ -1,4 +1,4 @@
-local hplayersthativendiessamerdadaledeledeledole = {"Nome Player"}
+local tablePlayer = {"Nome Player"}
 	local spamchacked = false
 	function msgError()
 		error("You need to get your acess to this script!")
@@ -9,7 +9,7 @@ local hplayersthativendiessamerdadaledeledeledole = {"Nome Player"}
 			msgError()
 		end
 	end)
-	if (table.contains(hplayersthativendiessamerdadaledeledeledole, player:getName())) then
+	if (table.contains(tablePlayer, player:getName())) then
 	local rerollPanelName = "rerollPanelSystem"
 local ui = setupUI([[
 Panel
@@ -62,7 +62,6 @@ Panel
 			end
 			if (string.find(text, modelMsg[1])) then
 				storage[rerollPanelName].status = text
-				print(storage[rerollPanelName].status)
 			end
 		end)
 
